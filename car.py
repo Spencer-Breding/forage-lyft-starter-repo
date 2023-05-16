@@ -1,10 +1,18 @@
-from abc import ABC, abstractmethod
+# -*- coding: utf-8 -*-
+"""
+Created on Mon May 15 23:02:30 2023
 
+@author: Spencer Breding
+"""
 
-class Car(ABC):
-    def __init__(self, last_service_date):
-        self.last_service_date = last_service_date
+from battery import *
+from engine import *
 
-    @abstractmethod
-    def needs_service(self):
-        pass
+class Car():
+    def __init__(self, engine, battery):
+        self.engine = engine
+        self.battery = battery
+    
+    def needs_service():
+        return self.battery.needs_service() and self.engine.needs_service()
+        
