@@ -5,13 +5,6 @@ Created on Tue May 16 16:34:56 2023
 @author: Spencer
 """
 
-# -*- coding: utf-8 -*-
-"""
-Created on Mon May 15 22:12:27 2023
-
-@author: Spencer Breding
-"""
-
 from abc import ABC, abstractmethod
 
 class Tire(ABC):
