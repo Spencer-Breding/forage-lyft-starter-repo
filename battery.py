@@ -6,7 +6,6 @@ Created on Mon May 15 22:12:27 2023
 """
 
 from abc import ABC, abstractmethod
-from datetime import datetime
 
 class Battery(ABC):
     @abstractmethod
@@ -14,7 +13,7 @@ class Battery(ABC):
         pass
 
 class NubbinBattery(Battery):
-    def __init__(self, _last_service_date, _current_date):
+    def __init__(self, last_service_date, current_date):
         self.last_service_date = last_service_date
         self.current_date = current_date
         
@@ -23,7 +22,7 @@ class NubbinBattery(Battery):
         return time_since_last_service.years >= 4
     
 class SpindlerBattery(Battery):
-    def __init__(self, _last_service_date, _current_date):
+    def __init__(self, last_service_date, current_date):
         self.last_service_date = last_service_date
         self.current_date = current_date
         

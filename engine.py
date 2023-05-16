@@ -21,11 +21,11 @@ class CapuletEngine(Engine):
         return self.current_mileage - self.last_service_mileage > 30000
     
 class SternmanEngine(Engine):
-    def __init__(self, _warning_light_on):
-        self.waring_light_on = warning_light_on
+    def __init__(self, warning_light_on):
+        self.warning_light_on = warning_light_on
     
     def needs_service(self):
-        return self.waring_light_on
+        return self.warning_light_on
     
 class WilloughbyEngine(Engine):
     def __init__(self, last_service_mileage, current_mileage):
