@@ -28,4 +28,4 @@ class SpindlerBattery(Battery):
         
     def needs_service(self):
         time_since_last_service = self.current_date - self.last_service_date
-        return time_since_last_service.days >= 730
+        return time_since_last_service.days >= 1095
